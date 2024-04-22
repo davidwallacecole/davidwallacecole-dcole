@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>San Diego Succulents</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Indie+Flower&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+      href=".css/style.css"
+    />
+
+    /> />
+    <link rel="stylesheet" href="./css/w3.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    />
+    <style>
+      body {
+        font-family: "Times New Roman", Georgia, Serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Playfair Display";
+        letter-spacing: 5px;
+      }
+    </style>
+    <style>
+      .mySlides {display:none}
+      .w3-left, .w3-right, .w3-badge {cursor:pointer}
+      .w3-badge {height:13px;width:13px;padding:0}
+      </style>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+  </head>
+  
+  <body style="background-color: #f6f0de">
+    
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div
+        class="w3-white"
+        style="letter-spacing: 4px; padding-top: 10px; padding-bottom: 10px;"
+      >
+        <a href="#home">
+          <img
+            class="w3-image"
+            src="img/logo.png"
+            alt="Website Logo"
+            style="margin-left: 38px; max-width: 100%; height: 50px"
+          />
+        </a>
+
+        <a href="#home" style="text-decoration: none">
+          <h4
+            class="indie-flower-regular"
+            style="
+              font-size: 25px;
+              letter-spacing: 1px;
+              line-height: 22px;
+              margin-top: -44px;
+              margin-left: 110px;
+            "
+          >
+            SaN DIEGO <br />
+            SUCCULENTS
+          </h4>
+        </a>
+
+        <!-- Right-sided navbar links. Hide them on small screens -->
+
+        <div class="w3-right w3-hide-small" style="margin-top: -50px">
+          <a
+            href="#Botanic-Gardens"
+            class="averia-serif-menu-text"
+            style="margin-right: 50px; display: inline-block"
+            >Botanic <br />Gardens</a
+          >
+          <a
+            href="#Local-Climate"
+            class="averia-serif-menu-text"
+            style="margin-right: 50px; display: inline-block"
+            >Local <br />Climate</a
+          >
+          <a
+            href="#Succulent-Info"
+            class="averia-serif-menu-text"
+            style="margin-right: 50px; display: inline-block"
+            >Succulent <br />Info</a
+          >
+          <a
+            href="#General-Tips"
+            class="averia-serif-menu-text"
+            style="margin-right: 50px; display: inline-block"
+            >General<br />Tips</a
+          >
+          <a
+            href="#Plant-Species"
+            class="averia-serif-menu-text"
+            style="margin-right: 50px; display: inline-block"
+            >Plant<br />Species</a
+          >
+          <img
+            class="w3-image"
+            src="img/Search Icon.png"
+            alt="Search Icon"
+            style="
+              margin-right: 50px;
+              margin-top: -25px;
+              display: inline-block;
+              max-width: 100%;
+              height: 35px;
+            "
+          />
+          <img
+            class="w3-image"
+            src="img/Shopping Cart.png"
+            alt="Shopping Cart"
+            style="
+              margin-right: 50px;
+              margin-top: -30px;
+              display: inline-block;
+              max-width: 100%;
+              height: 42px;
+            "
+          />
+          
+        </div>
+
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+        <a
+          href="javascript:void(0)"
+          class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+          onclick="w3_open()"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav
+      class="my-sidebar w3-bar-block w3-card w3-animate-left w3-hide-medium w3-hide-large"
+      style="display: none; background-color: #f6f0de;"
+      id="mySidebar"
+    >
+      <a
+        href="javascript:void(0)"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button w3-large w3-padding-16 averia-serif-page-header"
+        style="letter-spacing: 0px; font-size: 60px;"
+        >
+        Close &times;</a
+        >
+      <a href="#Botanic-Gardens" onclick="w3_close()" class="w3-bar-item w3-button averia-serif-table-header"
+        >Botanic Gardens</a
+      >
+      <a href="#Local-Climate" onclick="w3_close()" class="w3-bar-item w3-button averia-serif-table-header"
+        >Local Climate</a
+      >
+      <a href="#Succulent-Info" onclick="w3_close()" class="w3-bar-item w3-button averia-serif-table-header"
+        >Succulent Info</a
+      >
+      <a href="#General-Tips" onclick="w3_close()" class="w3-bar-item w3-button averia-serif-table-header"
+        >General Tips</a
+      >
+      <a href="#Plant-Species" onclick="w3_close()" class="w3-bar-item w3-button averia-serif-table-header"
+        >Plant Species</a
+      >
+      
+    </nav>
+
+    <!-- Header -->
+    <header
+      class="w3-display-container w3-content w3-wide"
+      style="max-width: 100%; min-width: 500px"
+      id="home"
+    >
+      <img
+        class="w3-image"
+        src="img/Landing Page-Succulents_02.jpg"
+        alt="Succulent Display"
+        style="width: 100%"
+      />
+      
+    </header>
+
+    <!-- Page content -->
+    <div class="w3-content" style="max-width: 67%">
+      <!-- Botanic Gardens Section -->
+      <div>
+        <div class="w3-row page-padding" id="Botanic-Gardens">
+          <div class="box-page-header averia-serif-page-header">
+            San Diego Botanic Gardens
+          </div>
+
+          <div class=>
+            <p
+              class="poppins-regular my-text-color-brown"
+              style="margin-top: 100px"
+            >
+              <img
+                src="/img/Balboa Park.jpg"
+                class="w3-image"
+                alt="Balboa Park Botanical Garden"
+                width="725"
+                height="750"
+                style="float: right; padding-left: 40px; padding-bottom: 40px;"
+              />
+              <p class="averia-serif-category-header">
+                Balboa Park <br/> Botanical Garden</p>
+                
+              <p class="poppins-regular">Botanical Building presents some of the Park’s vibrant seasonal
+              flower displays. Built for the 1915-16 Exposition, along with the
+              adjacent Lily Pond and Lagoon, the historic building is one of the
+              largest lath structures in the world. The Botanical Building
+              plantings include more than 2,100 permanent plants, featuring
+              fascinating collections of cycads, ferns, orchids, other tropical
+              plants, and palms. </p> 
+              <p class="poppins-regular">
+              Balboa Park is also home to many floral and
+              garden groups, including the San Diego Bonsai Club, San Diego
+              Geranium Society, San Diego County Orchid Society, Southern
+              California Plumeria Society and San Diego Floral Association, the
+              oldest garden club in Southern California. These groups host floral
+              and horticultural shows and plant sales in Balboa Park throughout
+              the year. </p>
+              <p class="poppins-regular">Check out their <a href="https://balboaparkbotanical.org/" class="my-text-color-green" style="font-weight: 500" target="_blank"> website.</a></p>
+            </p>
+          </div>
+        </div>
+        <div class=>
+          <p
+          class="poppins-regular my-text-color-brown"
+          style="margin-top: -30px"
+        >
+          <img
+            src="/img/San Diego Botanic Garden.jpg"
+            class="w3-image"
+            alt="San Diego Botanic Garden"
+            width="725"
+            height="750"
+            style="float: left; padding-right: 40px; padding-bottom: 40px;"
+          />
+          <p class="averia-serif-category-header">
+            San Diego <br/> Botanic Garden</p>
+            
+          <p class="poppins-regular">Established in 1970, San Diego Botanic Garden (SDBG) is a 37-acre urban oasis that creates, shares and applies plant wisdom with people of all backgrounds, ages and interests. The Garden's four miles of trails display more than 5,000 plant species and varieties, including 300 plants for which SDBG is the only garden maintaining a population.  </p> 
+          <p class="poppins-regular">
+            SDBG has 15 gardens that represent different regions of the world, 12 demonstration gardens, and the largest public bamboo collection in North America. SDBG has three children's gardens, including its flagship, one-acre Hamilton Children's Garden, the largest kids' garden on the west coast.</p>
+          <p class="poppins-regular">Check out their <a href="https://sdbg.org/" class="my-text-color-green" style="font-weight: 500" target="_blank"> website.</a></p>
+        </p>
+        </div>
+      </div>
+
+      
+
+      <!-- Local Climate Section -->
+      <div class="w3-row page-padding" id="Local-Climate">
+        <div class="box-page-header averia-serif-page-header">
+          Local Climate
+        </div>
+        <!-- Slideshow container -->
+        <div class="w3-row w3-col s7" style="margin-top: 100px; display: block; float: left;">
+          <div class="w3-content" style="max-width: 1200px">
+            <img 
+              class="mySlides" 
+              src="./img/01 San Diego Coast.jpg" 
+              alt="San Diego Coast"
+              style="width: 100%" 
+            />
+            <img
+              class="mySlides"
+              src="./img/02 San Diego Chaparral.jpg"
+              alt="San Diego Chaparral"
+              style="width: 100%; display: none"
+            />
+            <img
+              class="mySlides"
+              src="./img/03 San Diego Desert.jpg"
+              alt="San Diego Desert"
+              style="width: 100%; display: none"
+            />
+            <img
+              class="mySlides"
+              src="./img/04 San Diego Mountains 2.jpg"
+              alt="San Diego Mountains"
+              style="width: 100%; display: none"
+            />
+            
+            <div
+              class=" w3-section"
+              style="margin-left: auto; margin-right: auto; max-width: 100%"
+            >
+              <div class="w3-col s3 my-carousel">
+                <img
+                  class="demo w3-opacity w3-hover-opacity-off"
+                  src="./img/01 San Diego Coast.jpg"
+                  alt="San Diego Coast"
+                  style="width: 100%; cursor: pointer"
+                  onclick="currentDiv(1)"
+                />
+              </div>
+              <div class="w3-col s3 my-carousel">
+                <img
+                  class="demo w3-opacity w3-hover-opacity-off"
+                  src="./img/02 San Diego Chaparral.jpg"
+                  alt="San Diego Chaparral"
+                  style="width: 100%; cursor: pointer"
+                  onclick="currentDiv(2)"
+                />
+              </div>
+              <div class="w3-col s3 my-carousel">
+                <img
+                  class="demo w3-opacity w3-hover-opacity-off"
+                  src="./img/03 San Diego Desert.jpg"
+                  alt="San Diego Desert"
+                  style="width: 100%; cursor: pointer"
+                  onclick="currentDiv(3)"
+                />
+              </div>
+              <div class="w3-col s3 my-carousel">
+                <img
+                  class="demo w3-opacity w3-hover-opacity-off"
+                  src="./img/04 San Diego Mountains 2.jpg"
+                  alt="San Diego Mountains"
+                  style="width: 100%; cursor: pointer"
+                  onclick="currentDiv(4)"
+                />
+              </div>
+             </div>
+          </div>
+
+
+        </div>
+        <!-- Scrolling Text -->
+        <div class="container-scroll w3-col s5" style="padding-left: 40px;float: right;">
+          <div class="my-scrolling">
+            <p class="poppins-regular">
+             San Diego, located in Southern California, exhibits a diverse array of microclimates and climate regions due to its varied topography, proximity to the coast, and influence of regional weather patterns. Here are some of the main climate regions found in San Diego:
+            </p>
+            <p class="poppins-regular">
+              <b>Coastal Climate:</b> The coastal areas of San Diego typically experience a Mediterranean climate characterized by mild, wet winters and warm, dry summers. Temperatures are moderated by the nearby Pacific Ocean, with average highs ranging from the mid-60s to low 70s Fahrenheit (18-23°C) in winter and the mid-70s to low 80s Fahrenheit (24-28°C) in summer. Coastal fog is common, especially during the summer months.
+            </p>
+            <p class="poppins-regular">
+              <b>Inland Valley Climate:</b> Moving inland from the coast, San Diego's valleys experience slightly warmer temperatures and less maritime influence. Summers are warmer, with average highs reaching the mid-80s to low 90s Fahrenheit (29-34°C), while winters remain mild, with average highs in the 60s to low 70s Fahrenheit (15-23°C). Rainfall is generally lower in the inland valleys compared to the coast.</p>
+            <p class="poppins-regular">
+              <b>Mountain Climate:</b> San Diego County includes mountainous areas, such as the Cuyamaca and Laguna Mountains, which have a mountain climate. Summers are cooler at higher elevations, with average highs in the 70s to low 80s Fahrenheit (21-28°C), while winters can be cold, with occasional snowfall at the highest elevations. Precipitation is higher in the mountains, particularly during winter months, and temperatures can vary significantly with elevation.</p>
+            <p class="poppins-regular">
+              <b>Desert Climate:</b> The easternmost parts of San Diego County, including the Anza-Borrego Desert State Park, experience a desert climate. This region is characterized by hot summers with average highs exceeding 100°F (38°C) and mild winters with daytime temperatures typically ranging from the 60s to 70s Fahrenheit (15-26°C). Rainfall is low and sporadic, with most precipitation occurring during brief, intense thunderstorms in late summer and early fall.</p>
+            <p class="poppins-regular">
+              <b>Chaparral Climate:</b> The foothills and canyons around San Diego exhibit a chaparral climate characterized by hot, dry summers and mild, wet winters. Vegetation in these areas is adapted to periodic droughts and wildfires. Temperatures in summer can reach the 90s to low 100s Fahrenheit (32-38°C), while winter highs range from the 60s to 70s Fahrenheit (15-26°C). Rainfall is moderate compared to coastal areas, with most precipitation occurring between December and March.</p>
+            <p class="poppins-regular">
+              Overall, San Diego's diverse climate regions offer a range of environments, from coastal breezes and mild temperatures to desert heat and mountain vistas, making it a unique and attractive destination for residents and visitors alike.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Succulent Info Table Section -->
+      <div class="w3-row page-padding" id="Succulent-Info">
+        <div class="box-page-header averia-serif-page-header">
+          Succulent Info
+        </div>
+        <table id="myTable" 
+            style="margin-top: 100px; margin-left: auto; margin-right: auto; text-align: center; width: 100%; table-layout: fixed;
+            border: 5px solid #402420; border-collapse: collapse;"
+            >
+          <tr class="averia-serif-table-header table-height" style="background-color:#99c0a1; width: 25%;">
+            <th class="table-border" onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer">Common Name</th>
+            <th class="table-border" onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(2)')" style="cursor:pointer">Origin</th>
+            <th class="table-border" onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(3)')" style="cursor:pointer">Color</th>
+            <th class="table-border" onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(4)')" style="cursor:pointer">Sun</th>
+          </tr>
+          <tr class="item poppins-table-text table-height" style="width: 25%;">
+            <td class="table-border">Aloe</td>
+            <td class="table-border">Africa</td>
+            <td class="table-border">Green</td>
+            <td class="table-border">Partial - Full</td>
+          </tr>
+          <tr class="item poppins-table-text table-height"  style="width: 25%;">
+            <td class="table-border">Sticks of Fire</td>
+            <td class="table-border">Africa (Southern)</td>
+            <td class="table-border">Red</td>
+            <td class="table-border">Full</td>
+          </tr>
+          <tr class="item poppins-table-text table-height"  style="width: 25%;">
+            <td class="table-border">Sempurvivum 'Kip'</td>
+            <td class="table-border">Europe (Southern)</td>
+            <td class="table-border">Purple</td>
+            <td class="table-border">Full</td>
+          </tr>
+          <tr class="item poppins-table-text table-height"  style="width: 25%;">
+            <td class="table-border">Snake Plant</td>
+            <td class="table-border">Africa (West)</td>
+            <td class="table-border">Green & Yellow</td>
+            <td class="table-border">Indirect</td>
+          </tr>
+         </table>
+      </div>
+
+      <!-- General Tips Video and Accordian Section -->
+      <div class="w3-row page-padding" id="General-Tips">
+        <div class="box-page-header averia-serif-page-header">
+          General Tips
+        </div>
+        <div class="w3-row" style="margin-top: 100px;">
+          <div class="w3-col s4">
+            <h4 class="averia-serif-video-header">Succulent Tips</h4>
+            <h4 class="averia-serif-video-header">for Beginners</h4>
+          </div>   
+          <div class="w3-col s4">
+            <h4 class="averia-serif-video-header">10 Tips & Tricks to Growing </h4>
+            <h4 class="averia-serif-video-header">Succulents & Cacti</h4>
+          </div>
+          <div class="w3-col s4">
+            <h4 class="averia-serif-video-header" style="padding-top: 12px;">Succulent Planting Tips</h4>
+          </div>
+        </div>
+        <div class="w3-row" style="margin-top: 15px;">
+          <div>
+            <iframe 
+              class="w3-row w3-col s4"
+              style="display: block; float: left;"
+              width="100%" height="270" 
+              src="https://www.youtube.com/embed/f8nsXcxySig">
+            </iframe>
+            <iframe 
+              class="w3-row w3-col s4"
+              style="display: block;"
+              width="100%" height="270" 
+              src="https://www.youtube.com/embed/W4A07DQ3QaE">
+            </iframe>
+            <iframe 
+              class="w3-row w3-col s4"
+              style="display: block; float: right;"
+              width="100%" height="270" 
+              src="https://www.youtube.com/embed/Zq3okZyvmQM">
+            </iframe>
+          </div>
+          <div class="w3-col s6 w3-left" style="padding-top: 50px;">
+            <button
+              class= "w3-block button button1"
+              onclick="myAccordion('accordion1')"
+            >
+              <h4 class="accordian-header">Common Pests<i class="fa fa-caret-down" style="padding-left: 15px;"></i></h4>
+            </button>
+            <div id="accordion1" class="w3-hide w3-container poppins-regular">
+              <p>
+                Succulents, although fairly resilient, can still fall prey to a variety of pests. Here are some common ones you might encounter in a garden: 
+              </p>
+              <p>
+                <span class="poppins-accordian-header">Mealybugs:</span> These are small, soft-bodied insects covered with a white, cotton-like substance. They suck sap from succulent leaves, causing them to wilt and sometimes die.
+              </p>
+              <p>
+                <span class="poppins-accordian-header">Aphids:</span> These tiny insects come in various colors and cluster on new growth, sucking sap from the plant. They can cause yellowing and distortion of leaves.
+              </p>
+              <p>   
+                <span class="poppins-accordian-header">Scale Insects:</span> These pests appear as small, round, or oval bumps on plant stems and leaves. They can cause yellowing and wilting of the affected parts.
+              </p>
+              <p>
+                <span class="poppins-accordian-header">Spider Mites:</span> These are very small pests that often create fine webs on the leaves of succulents. They suck the juices from the plant, causing stippling, discoloration, and eventual leaf drop.
+              </p>
+              <p>
+                <span class="poppins-accordian-header">Fungus Gnats:</span> Although more commonly associated with overwatering, fungus gnats can still be a problem for succulents. Their larvae feed on the roots of the plant, leading to root damage and poor growth.
+              </p>
+              <p>
+                <span class="poppins-accordian-header">Snails and Slugs:</span> These creatures can chew on succulent leaves, leaving behind ragged edges and holes. They are more active at night and during damp conditions.
+              </p>  
+              <p>
+                <span class="poppins-accordian-header">Thrips:</span> Thrips are tiny insects that feed on succulent leaves, leaving behind silvery or bronzed scars. Heavy infestations can cause stunted growth and distorted leaves.
+              </p>
+              <p>
+                <span class="poppins-accordian-header">Caterpillars:</span> Some caterpillars may feed on succulent leaves, leaving behind large holes or even completely defoliating the plant.
+              </p>
+              <p>
+                To prevent and manage these pests, it's essential to regularly inspect your succulents, maintain good hygiene practices, avoid overwatering, and consider natural predators or insecticidal solutions if necessary.
+              </p>
+            </div>
+          </div>
+          <div class="w3-col s6 w3-right" style="padding-left: 5px; padding-top: 50px;">
+            <button
+              class="w3-block button button1"
+              
+              onclick="myAccordion('accordion2')"
+            >
+              <h4 class="accordian-header">Helpful Critters<i class="fa fa-caret-down" style="padding-left: 15px;"></i></h4>
+            </button>
+            <div id="accordion2" class="w3-hide w3-container poppins-regular">
+              <p>
+                In a succulent and cactus garden, several beneficial creatures can help maintain a healthy ecosystem and control pest populations naturally. Here are some of them:
+              </p>
+              <p>
+                <span class="poppins-accordian-header">Ladybugs (Lady Beetles):</span> Ladybugs are voracious predators of aphids, mealybugs, and other soft-bodied pests that commonly infest succulents and cacti. Encouraging ladybugs in your garden can help keep pest populations in check.
+              </p>
+              <p>
+                <span class="poppins-accordian-header">Predatory Mites:</span> Certain species of predatory mites, such as Phytoseiulus persimilis, feed on spider mites, which can be a common pest of succulents. Introducing predatory mites can help control spider mite populations without the need for chemical pesticides.
+              </p>
+              <p>
+                <span class="poppins-accordian-header">Parasitic Wasps:</span> Some species of parasitic wasps lay their eggs inside the bodies of pest insects, such as aphids and caterpillars, ultimately killing them. Encouraging parasitic wasps in your garden can provide effective biological control of pest populations.
+              </p>
+              <p>
+                <span class="poppins-accordian-header">Ground Beetles:</span> Ground beetles are nocturnal predators that feed on a variety of pests, including snails, slugs, caterpillars, and beetle larvae. Maintaining a diverse habitat with suitable hiding places can attract ground beetles to your garden.
+              </p>
+              <p>
+                <span class="poppins-accordian-header">Birds:</span> Certain bird species, such as wrens, sparrows, and finches, feed on insects and can help control pest populations in your garden. Providing bird-friendly features like bird baths, feeders, and nesting sites can attract these beneficial birds to your succulent garden.
+              </p>
+              <p>
+                <span class="poppins-accordian-header">Praying Mantises:</span> Praying mantises are generalist predators that feed on a wide range of insects, including aphids, caterpillars, and beetles. Introducing praying mantis eggs or nymphs into your garden can help control pest populations naturally.
+              </p>
+              <p>
+                <span class="poppins-accordian-header">Nematodes:</span> Beneficial nematodes are microscopic roundworms that parasitize and kill soil-dwelling pests, such as fungus gnats, thrips, and beetle larvae. Applying nematodes to the soil can provide effective biological control of these pests.
+              </p>
+              <p>
+                <span class="poppins-accordian-header">Ants:</span> While ants can sometimes be considered pests themselves, certain species of ants are beneficial predators that feed on other insects and help control pest populations in the garden. Encouraging native ant species and maintaining a balance in their populations can contribute to natural pest control.
+              </p>
+              <p>
+                By promoting biodiversity and creating a habitat that supports these beneficial creatures, you can reduce the need for chemical pesticides and create a healthier, more sustainable environment for your succulent and cactus garden.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      <!-- End page content -->
+      </div>
+
+      <!-- Plant Species Lightbox Section -->
+      <div class="w3-row page-padding" id="Plant-Species">
+        <div class="box-page-header averia-serif-page-header">
+          Plant Species
+        </div>
+        <div class="w3-row" style="margin-top: 100px;">
+          <!-- Lightbox Before -->
+          <div class="w3-row-padding" style="margin: 15px;">
+            <div class="w3-col s4">
+              <img src="/img/Lightbox 1.jpg"
+              style="width: 100%; cursor: zoom-in;"
+              onclick="document.getElementById('moda102').style.display='block'"
+              class="w3-hover-shadow">
+            </div>
+            <div class="w3-col s4">
+              <img src="/img/Lightbox 2.jpg"
+              style="width: 100%; cursor: zoom-in;"
+              onclick="document.getElementById('moda101').style.display='block'"
+              class="w3-hover-shadow">
+            </div>
+            <div class="w3-col s4">
+              <img src="/img/Lightbox 3.jpg"
+              style="width: 100%; cursor: zoom-in;"
+              onclick="document.getElementById('moda103').style.display='block'"
+              class="w3-hover-shadow">
+            </div>
+          <div class="w3-row-padding" style="margin: -10px;">
+            <div class="w3-col s4">
+              <img src="/img/Lightbox 4.jpg"
+              style="width: 100%; cursor: zoom-in; padding-top: 15px;"
+              onclick="document.getElementById('moda104').style.display='block'"
+              class="w3-hover-shadow">
+            </div>
+            <div class="w3-col s4">
+              <img src="/img/Lightbox 5.jpg"
+              style="width: 100%; cursor: zoom-in; padding-top: 15px;"
+              onclick="document.getElementById('moda105').style.display='block'"
+              class="w3-hover-shadow">
+            </div>
+            <div class="w3-col s4">
+              <img src="/img/Lightbox 6.jpg"
+              style="width: 100%; cursor: zoom-in; padding-top: 15px;"
+              onclick="document.getElementById('moda106').style.display='block'"
+              class="w3-hover-shadow">
+            </div>
+          </div>
+          <div class="w3-row-padding" style="margin: -10px; padding-top: 20px;">
+            <div class="w3-col s4">
+              <img src="/img/Lightbox 7.jpg"
+              style="width: 100%; cursor: zoom-in; padding-top: 5px;"
+              onclick="document.getElementById('moda107').style.display='block'"
+              class="w3-hover-shadow">
+            </div>
+            <div class="w3-col s4">
+              <img src="/img/Lightbox 8.jpg"
+              style="width: 100%; cursor: zoom-in; padding-top: 5px;"
+              onclick="document.getElementById('moda108').style.display='block'"
+              class="w3-hover-shadow">
+            </div>
+            <div class="w3-col s4">
+              <img src="/img/LIghtbox 9.jpg"
+              style="width: 100%; cursor: zoom-in; padding-top: 5px;"
+              onclick="document.getElementById('moda109').style.display='block'"
+              class="w3-hover-shadow">
+            </div>
+          </div>
+          
+            <!-- Lightbox After -->
+
+            <div id="moda102" class="w3-modal" onclick="this.style.display='none'" style="display: none;">
+              <span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer;">x</span>
+              <div class="my-modal-content w3-animate-zoom">
+                <h2 class="w3-center averia-serif-video-header"
+                  style="padding-top: 20px; padding-bottom: 10px;">
+                  Donkey's Tail
+                </h2>
+                <img src="/img/Lightbox 1.jpg"
+                  class="w3-center" 
+                  style="width: 423px; height: 423px; margin-left: auto; margin-right: auto;">
+              </div>      
+            </div>
+            <div id="moda101" class="w3-modal" onclick="this.style.display='none'" style="display: none;">
+              <span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer;">x</span>
+              <div class="my-modal-content w3-animate-zoom">
+                <h2 class="w3-center averia-serif-video-header"
+                  style="padding-top: 20px; padding-bottom: 10px;">
+                  Silver Dollar Plant
+                </h2>
+                <img src="/img/Lightbox 2.jpg"
+                  class="w3-center" 
+                  style="width: 423px; height: 423px; margin-left: auto; margin-right: auto;">
+              </div>      
+            </div>
+            <div id="moda103" class="w3-modal" onclick="this.style.display='none'" style="display: none;">
+              <span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer;">x</span>
+              <div class="my-modal-content w3-animate-zoom">
+                <h2 class="w3-center averia-serif-video-header"
+                  style="padding-top: 20px; padding-bottom: 10px;">
+                  Mexican Snowballs
+                </h2>
+                <img src="/img/Lightbox 3.jpg"
+                  class="w3-center" 
+                  style="width: 423px; height: 423px; margin-left: auto; margin-right: auto;">
+              </div>      
+            </div>
+            <div id="moda104" class="w3-modal" onclick="this.style.display='none'" style="display: none;">
+              <span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer;">x</span>
+              <div class="my-modal-content w3-animate-zoom">
+                <h2 class="w3-center averia-serif-video-header"
+                  style="padding-top: 20px; padding-bottom: 10px;">
+                  Echeveria
+                </h2>
+                <img src="/img/Lightbox 4.jpg"
+                  class="w3-center" 
+                  style="width: 423px; height: 423px; margin-left: auto; margin-right: auto;">
+              </div>      
+            </div>
+            <div id="moda105" class="w3-modal" onclick="this.style.display='none'" style="display: none;">
+              <span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer;">x</span>
+              <div class="my-modal-content w3-animate-zoom">
+                <h2 class="w3-center averia-serif-video-header"
+                  style="padding-top: 20px; padding-bottom: 10px;">
+                  String of Pearls
+                </h2>
+                <img src="/img/Lightbox 5.jpg"
+                  class="w3-center" 
+                  style="width: 423px; height: 423px; margin-left: auto; margin-right: auto;">
+              </div>      
+            </div>
+            <div id="moda106" class="w3-modal" onclick="this.style.display='none'" style="display: none;">
+              <span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer;">x</span>
+              <div class="my-modal-content w3-animate-zoom">
+                <h2 class="w3-center averia-serif-video-header"
+                  style="padding-top: 20px; padding-bottom: 10px;">
+                  Candelabra Cactus
+                </h2>
+                <img src="/img/Lightbox 6.jpg"
+                  class="w3-center" 
+                  style="width: 423px; height: 423px; margin-left: auto; margin-right: auto;">
+              </div>      
+            </div>
+            <div id="moda107" class="w3-modal" onclick="this.style.display='none'" style="display: none;">
+              <span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer;">x</span>
+              <div class="my-modal-content w3-animate-zoom">
+                <h2 class="w3-center averia-serif-video-header"
+                  style="padding-top: 20px; padding-bottom: 10px;">
+                  Christmas Cactus
+                </h2>
+                <img src="/img/Lightbox 7.jpg"
+                  class="w3-center" 
+                  style="width: 423px; height: 423px; margin-left: auto; margin-right: auto;">
+              </div>      
+            </div>
+            <div id="moda108" class="w3-modal" onclick="this.style.display='none'" style="display: none;">
+              <span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer;">x</span>
+              <div class="my-modal-content w3-animate-zoom">
+                <h2 class="w3-center averia-serif-video-header"
+                  style="padding-top: 20px; padding-bottom: 10px;">
+                  Chocolate Soldier Plant
+                </h2>
+                <img src="/img/Lightbox 8.jpg"
+                  class="w3-center" 
+                  style="width: 423px; height: 423px; margin-left: auto; margin-right: auto;">
+              </div>      
+            </div>
+            <div id="moda109" class="w3-modal" onclick="this.style.display='none'" style="display: none;">
+              <span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer;">x</span>
+              <div class="my-modal-content w3-animate-zoom">
+                <h2 class="w3-center averia-serif-video-header"
+                  style="padding-top: 20px; padding-bottom: 10px;">
+                  Ponytail Palm
+                </h2>
+                <img src="/img/Lightbox 9.jpg"
+                  class="w3-center" 
+                  style="width: 423px; height: 423px; margin-left: auto; margin-right: auto;">
+              </div>      
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+      class="container"
+      style="background-color: #99c0a1; overflow: hidden; padding-top: 15px;"
+      >
+      <h4
+        class="averia-serif-intro-subheading top-left-footer"
+        style="font-size: 27px; margin-top: -6px;">
+        EMAIL US
+      </h4>
+
+      <a
+        href="https://www.facebook.com/"
+        target="_blank"
+        style="text-decoration: none"
+      >
+        <img
+          src="/img/facebook icon.png"
+          class="container top-left-footer"
+          style="
+            display: block;
+            max-width: 100%;
+            height: 34px;
+            margin-top: 26px;
+            float: left;
+            margin-left: -2px;
+          "
+        />
+      </a>
+      <a
+        href="https://www.instagram.com/"
+        target="_blank"
+        style="text-decoration: none"
+      >
+        <img
+          src="/img/instagram icon.png"
+          class="container top-left-footer"
+          style="
+            display: block;
+            max-width: 100%;
+            height: 34px;
+            margin-top: 26px;
+            float: left;
+            margin-left: 40px;
+          "
+        />
+      </a>
+      <a
+        href="https://www.twitter.com/"
+        target="_blank"
+        style="text-decoration: none"
+      >
+        <img
+          src="/img/x icon.png"
+          class="container top-left-footer"
+          style="
+            display: block;
+            max-width: 100%;
+            height: 34px;
+            margin-top: 26px;
+            float: left;
+            margin-left: 82px;
+          "
+        />
+      </a>
+      <h4
+        class="averia-serif-intro-subheading bottom-left-footer"
+        style="font-size: 27px; margin-bottom: 24px; margin-left: -2px;"
+      >
+        NEWSLETTER SIGN UP
+      </h4>
+      <div class="box-email">
+        <style></style>
+        <h4
+          class="averia-serif-site-intro"
+          style="
+            font-size: 24px;
+            text-align: left;
+            margin-top: 1.3px;
+            padding-left: 10px;
+            font-weight: 200;
+          "
+        >
+          <span style="opacity: 0.6">EMAIL</span>
+        </h4>
+      </div>
+      <img
+        src="/img/Footer Image.png"
+        class="container"
+        style="
+          vertical-align: bottom;
+          display: block;
+          float: right;
+          max-width: 100%;
+          height: 172px;
+        "
+      />
+      <img
+        src="/img/Logo.png"
+        class="centered"
+        style="
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+          max-width: 100%;
+          height: 110px;
+          margin-top: -20px;
+        "
+      />
+      <a href="#home" style="text-decoration: none">
+        <p
+          class="indie-flower-regular centered box-centered-footer"
+          style="
+            font-size: 23px;
+            letter-spacing: 1px;
+            line-height: 22px;
+            padding-top: 83px;
+            padding-right: 195px;
+          "
+        >
+          SaN DIEGO <br />
+          SUCCULENTS
+        </p>
+      </a>
+      <h4
+        class="averia-serif-intro-subheading top-right-copyright"
+        style="color: #f6f0de; font-size: 25px; margin-top: -2px;"
+      >
+        &copy; San Diego Succulents 2024
+      </h4>
+      <h3
+        class="averia-serif-intro-subheading top-right-copyright box-centered"
+        style="
+          color: #f6f0de;
+          font-size: 18px;
+          padding-top: 25px;
+          line-height: 22px;
+          margin-top: 1px;
+          right: 165px;
+        "
+      >
+        All Rights Reserved.<br /><span style="padding-left: 10px">
+          Policy &#124; Disclaimer</span
+        >
+      </h3>
+    </footer>
+    
+    <!-- Provided Javascript -->
+    <script>
+      var myIndex = 0;
+      carousel();
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+          myIndex = 1;
+        }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 5000); // Change image every 2 seconds
+      }
+
+      // slideshow - carousel
+      function currentDiv(n) {
+        showDivs((slideIndex = n));
+        myIndex = n;
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+        }
+        x[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " w3-opacity-off";
+      }
+
+      // Toggle between showing and hiding the sidebar when clicking the menu icon
+      var mySidebar = document.getElementById("mySidebar");
+
+      function w3_open() {
+        if (mySidebar.style.display === "block") {
+          mySidebar.style.display = "none";
+        } else {
+          mySidebar.style.display = "block";
+        }
+      }
+
+      // Close the sidebar with the close button
+      function w3_close() {
+        mySidebar.style.display = "none";
+      }
+    </script>
+
+    <script>
+      // sortable table
+      $(document).ready(function () {
+        $("table#myTable").tablesorter({
+          sortList: [[2, 0]], // first index - column. second index - 0 for asc; 1 for desc
+          CssAsc: "tablesorter-headerAsc",
+          CssDesc: "tablesorter-headerDesc",
+        });
+      });
+    </script>
+
+    <script>
+      function myAccordion(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+          x.previousElementSibling.className =
+            x.previousElementSibling.className.replace("my-text-color-green", "my-text-color-green");
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+          x.previousElementSibling.className =
+            x.previousElementSibling.className.replace("my-text-color-green", "my-text-color-green");
+        }
+      }
+    </script>
+  </body>
+</html>
